@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*24.- ***** CLASES Y HERENCIAS *****
+        class Animal{
+    //el constructor es un metodo especial que se ejecuta en el momento
+    //de instaciar la clase
+        constructor(nombre,genero){
+            this.nombre = nombre;
+            this.genero = genero;
+        }    
+    //metodos
+        sonar(){
+            console.log(`hago sonidos porque estoy vivo`);
+        }
+        saludar(){
+            console.log(`hola mi nombre es ${this.nombre}`);
+        }
+        }
+// .*****HERENCIA*****
+        class Perro extends Animal{
+            constructor(nombre,genero,altura){
+    // con el metodo super() se manda a llamar al constructor
+            super(nombre,genero);
+            this.altura = altura;
+            this.raza = null;
+            }
+            sonar(){
+                console.log('soy un perro y mi accion es ladrar');
+            }
+            ladrar(){
+                console.log('guauuu guauu!!');
+            }
+    //un metodo estatico se puede ejecutar sin necesidad de instanciar la clase
+            static queEres(){
+                console.log('soy un perro considerado amigo del hombre');
+            }
+    //metodo get y set
+            get getRaza(){
+                return this.raza;
+            }
+            set setRaza(raza){
+                this.raza = raza;
+            }
+        }
+        Perro.queEres();
+
+
+        const mimi = new Animal('mimi','hembra');
+        console.log(mimi);
+        mimi.saludar();
+        mimi.sonar();
+        const scooby = new Perro('scooby','macho','gigante');
+        console.log(scooby);
+        scooby.saludar();
+        scooby.sonar();
+        scooby.ladrar();
+//25.- ***** METODO STATIC GETTER AND SETTER *****
+        console.log(scooby.getRaza);
+        console.log(scooby.setRaza = 'Gran Danes');
+//26.- ***** OBJETO CONSOLE *****
+        console.log(console);
+        console.warn('esto es un warning');
+        console.error('esto es un error');
+        console.info('esto es una informacion');
+
+        let nombre = 'alejandro',apellido = 'sanchez';
+        let edad = 20;
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(`hola mi nombre es ${nombre} ${apellido} y tengo ${edad} anios`);
+        console.log(`hola mi nombre es %s %s y tengo %d anios`,nombre,apellido,edad);
+        console.clear();
+        console.group('Contacto de @alejandro');
+        console.log('instagram @alesnchz8');
+        console.log('facebook @snchz ale');
+        console.log('Wattsapp 9712068921');
+        console.groupEnd();
+
+        console.log(console);
+        console.table(Object.entries(console).sort());
+
+        const numeros = [1,2,3,4,5,6,7];
+        console.table(numeros);
+        const vocales = ['a','b','c','d','e'];
+        console.table(vocales);
+
+        const perro ={
+            nombre:'RON',
+            apellido:'R',
+            edad:23
+        }
+        console.table(perro);
+//27.- ***** OBJETO DATE *****
+        console.log(Date());
+        let fecha = new Date();
+        console.log(fecha.getDay());
+        console.log(fecha.getDate());
+        console.log(fecha.getMonth());
+        console.log(fecha.getFullYear());
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getSeconds());
+
+        console.log(fecha.toDateString());
+        console.log(fecha.toLocaleDateString());
+        console.log(fecha.toLocaleString());
+        console.log(fecha.toLocaleTimeString());
+//28.- ****** OBJETO MATH*****
+        console.log(Math.abs(-7.8));
+        console.log(Math.ceil(7.2));
+        console.log(Math.floor(7.8));
+        console.log(Math.round(7.5));
+        console.log(Math.sqrt(4));
+        console.log(Math.pow(2,4));
+        console.log(Math.sign(-0.3));
+        console.log(Math.random());
+        console.log(Math.round(Math.random()*1000));
+//29.- ***** CORTOCIRCUITO *****
+    //cortocircuito or: cuando el valor de la izquierda en la expresion siempre puede validar a true
+    //es el valor que se cargara por defecto.
+    
+    //CORTOCIRCUITO AND: cuando el valor de la izquierda en la expresion siempre puede validar a false
+    //es el valor que se cargara por defecto.
+
+//30.- *****  ALERT, CONFIRM, PROMPT *****
+        console.log(window)
+        window.alert("esto es una alerta");
+        window.confirm("esto es una confirmacion");
+        window.prompt("esto es un prompt y le permite al usuario ingresar un valor");
+
+        // console.log(window)
+        let alerta = alert("esto es una alerta");
+        let confirmacion = confirm("esto es una confirmacion");
+        let ingNum = prompt("esto es un prompt y le permite al usuario ingresar un valor");
+        console.log(alerta);
+        console.log(confirmacion);
+        console.log(ingNum);
+//31.- ***** EXPRESIONES REGULARES ***** 
+    // una secuencia de caracteres que forman un patron de busqueda, y que se utiliza en la 
+    //busqueda de cadenas de texto
+        let cadena = "Varias VLAN pueden coexistir en un único varias físico o en una única red física.";
+        let expresion = new RegExp("Varias","ig");
+        console.log(expresion.test(cadena));
+        console.log(expresion.exec(cadena));
+    //la i es para ignorar mayusculas
+    //la g es para que busque todas
+
+        let exp = /varias/ig;
+        console.log(exp.test(cadena));
+        console.log(exp.exec(cadena));
+//32.- ***** FUNCIONES ANONIMAS AUTOEJECUTABLES *****
+    //se llaman anonimas porque no solamente las definimos sino tambien las estamos ejecutando
+    //en el momento de crearlas y no tiene nombre.
+        (function (d,w,c){
+            console.log(d);
+            console.log(w);
+            c.log("esto es un console.log()");
+
+        })(document,window,console);*/
+//33.- ***** IMPORT EXPORT *****
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUEVOS TIPOS DE DATOS EN Javascript</title>
+</head>
+<body>
+    <script>
+// 49. ***** SYMBOLS *****
+//crear identificadores unicos o de referencia. crear propiedades privadas de los objetos
+        // let id = Symbol("id");
+        // let id2= Symbol("id2");
+        // console.log(id === id2);
+        // console.log(id,id2);
+        // console.log(typeof id,typeof id2);
+        // const NOMBRE = Symbol("nombre");
+        // const SALUDAR =Symbol("saludar");
+        // const persona = {
+        //     [NOMBRE]:"alejandro",
+        //     edad: 21
+        // }
+        // console.log(persona);
+        // console.log(persona[NOMBRE]);
+        // persona.NOMBRE="carlos";
+        // console.log(persona);
+        // persona[SALUDAR]=function(){
+        //     console.log("HOLA");
+        // }
+        // console.log(persona);
+        // persona[SALUDAR];
+        // for (const propiedad in persona) {
+        //     console.log(persona);
+        //     console.log(persona[propiedad]);
+        // }
+        // console.log(Object.getOwnPropertySymbols(persona));
+
+//50.- ***** SETS *****
+//Arreglo mejorado que solo acepta vaores unicos primitivos e irrepetibles
+    //     const set = new Set([1,2,3,3,3,4,5,true,false,false,{},{},"hola","Hola"]);
+    //     console.log(set);
+    //     console.log(set.size);
+    //     const set2 = new Set();
+    //     set2.add(1);
+    //     set2.add(2);
+    //     set2.add(3);
+    //     set2.add(3);
+    //     set2.add(4);
+    //     set2.add(true);
+    //     set2.add(false);
+    //     set2.add(false);
+    //     set2.add({});
+    //     set2.add({});
+    //     set2.add("hola");
+    //     console.log(set2);
+    //     console.log(set2.size);
+    //     console.log("recorriendo set");
+    //     for (const i of set) {
+    //         console.log(i);
+    //     }
+    //     console.log("recorriendo set2")
+    //     for (const j of set2) {
+    //         console.log(j);
+    //     }
+    // //convertir un set a array
+    //     let arr = Array.from(set);
+    //     console.log(arr[0]);
+    // //borrar algun dato del set
+    //     set.delete("hola");
+    // //buscar si se encuentra algun dato en el set
+    //     console.log(set.has(1));
+    //     console.log(set.has(10));
+    // //limpiar un set
+    //     console.log(set);
+    //     set.clear();
+    //     console.log(set);
+
+//51. ***** MAPS *****
+//son objetos que nos sirven para almacenar, conjunto de valores asociados a manera de objeto
+    //     const mapa = new Map();
+    //     mapa.set("nombre","Alejandro");
+    //     mapa.set("apellido","Sanchez");
+    //     mapa.set("edad",21);
+    //     mapa.set(12,"doce");
+    //     mapa.set(null,"nulo");
+    // //imprimir el tipo de dato
+    //     console.log(mapa);
+    //     console.log(mapa.size);
+    // //metodo get buscar algun dato
+    //     console.log(mapa.get("nombre"));
+    //     console.log(mapa.get(12));
+    // //metodo delete, eliminar dato
+    //     mapa.delete(null);
+    //     console.log(mapa);
+    // //destructurar y enlistar por el metodo for of los valores del objeto
+    //     for (let [key,value]of mapa) {
+    //         console.log(`key= ${key}, valor= ${value}`);
+    //     }
+    // //otra manera de crear un tipo map
+    //     const mapa2 = new Map([["nombre","ale"],["apellido","lopez"],['edad',20]]);
+    //     console.log(mapa2);
+    //     console.log(mapa2.size);
+    // //iterar solo llaves y solo valores, dentro de un objeto real
+    //     const llave = [...mapa2.keys()];
+    //     const valor = [...mapa2.values()];
+    //     console.log(llave);
+    //     console.log(valor);
+
+//52.- ***** WEAKSETS & WEATMAPS *****
+//solamente pueden almacenar referencias debiles las llaves son de tipo objeto
+    //     const ws = new WeakSet();
+    //     let valor1 = {"valor":1};
+    //     let valor2 = {"valor":2};
+    //     let valor3 = {"valor":3};
+    //     ws.add(valor1);
+    //     ws.add(valor2);
+    //     console.log(ws);
+    // //ver si existe el valor en el objeto
+    //     console.log(ws.has(valor1));
+    //     console.log(ws.has(valor3));
+    // //eliminar algun valor del objeto
+    //     // console.log(ws);
+    //     // ws.delete(valor2);
+    //     // console.log(ws);
+    //     // setInterval(()=>{
+    //     //     console.log(ws);
+    //     // },1000);
+    //     // setTimeout(()=>{
+    //     //     valor1 = null;
+    //     //     valor2 = null;
+    //     //     valor3 = null;
+    //     //     console.log(ws);
+    //     // },5000);
+    //     const wm = new WeakMap();
+    //     let llave1 = {};
+    //     let llave2 = {};
+    //     let llave3 = {};
+    //     wm.set(llave1,1);
+    //     wm.set(llave2,2);
+    //     console.log(wm);
+    // //ver si existe el valor en el objeto
+    //     console.log(wm.has(llave1));
+    //     console.log(wm.has(llave3));
+    // //eliminar algun valor del objeto
+    //     console.log(wm);
+    //     wm.delete(llave2);
+    //     console.log(wm);
+    // //obtener alguna referencia con el metodo get
+    //     console.log(wm.get(llave1));
+    //     setInterval(()=>{
+    //         console.log(wm);
+    //     },1000);
+    //     setTimeout(()=>{
+    //         llave1 = null;
+    //         llave2 = null;
+    //         llave3 = null;
+    //         console.log(wm);
+    //     },5000);
+
+
+//53.- ***** ITERABLES & ITERATORS *****
+//ITERABLES.- significa que es una estructura de datos lineal que hace que sus datos sean publicos 
+//y se puedan recorrer (ARREGLOS, STRINGS, MAPS, SETS).
+//ITERADOR.- es el apuntador que recorre los elementos.
+    //     const iterable = "Hola mundo";
+    // //accedemos al iterador del iterable
+    //     const iterador = iterable[Symbol.iterator]();
+    //     console.log(iterable);
+    //     console.log(iterador);
+    //     let next = iterador.next();
+    //     while(!next.done){
+    //         console.log(next.value);
+    //         next = iterador.next();
+    //     }
+
+//54.- ***** GENERATOR *****
+//Generar Iteradores., funcion que nos permite trabajar con la interfaz de los iteradores en un
+//elemento iterable. Convertir el codigo de una funcion en iterable
+        // function* iterable(){
+        //     yield "hola";
+        //     console.log("hola consola");
+        //     yield "hola 2";
+        //     console.log("seguimos con las instrucciones de nuestro codigo");
+        //     yield "hola 3";
+        //     yield "hola 4";
+        // }
+        // let iterador = iterable();
+
+        // for (const x of iterador) {
+        //     console.log(x);
+        // }
+        // const arr = [...iterable()];
+        // console.log(arr);
+
+        // function cuadrado(valor){
+        //     setTimeout(()=>{
+        //         console.log({valor,resultado:valor*valor});
+        //     },Math.random()*1000);
+        // }
+
+        // function* generador(){
+        //     console.log("Inicia el generador");
+        //     yield cuadrado(0);
+        //     yield cuadrado(1);
+        //     yield cuadrado(2);
+        //     yield cuadrado(3);
+        //     yield cuadrado(4);
+        //     yield cuadrado(5);
+        //     console.log("final del generador");
+        // }
+
+        // let gen = generador();
+        // for (let y of gen) {
+        //     console.log(y);
+        // }
+
+//55.- ***** PROXIES *****
+//nuevo mecanismo que tiene JavaScript que te permite crear un objeto basado en
+//un objeto literal inicial.
+        // const persona ={
+        //     nombre:"",
+        //     apellido:"",
+        //     edad:0
+        // }
+        // const manejador={
+        //     set(obj,prop,value){
+        //         if(Object.keys(obj).indexOf(prop)===-1){
+        //             return console.error(`La propiedad "${prop}" no existe en el objeto`)
+        //         }
+        //         if((prop ==="nombre" || prop==="apellido")&&!(/^[A-Za-zÑñÁÉÍÓÚáéíóú\s]+$/g.test(value))){
+        //             return console.error(`la propiedad ${prop} solo acepta letras y espacios en blanco`);
+        //         }
+        //         if ((prop === "edad") && !(/^[0-9]+$/g.test(value))) {
+        //         return console.warn("LA PROPIEDADES debe SER UN NUMERO")
+        //         }
+        //         obj[prop]=value;
+        //     }           
+        // }
+        // const ale = new Proxy(persona,manejador);
+        // ale.nombre="alejandro";
+        // ale.apellido="sanchez";
+        // ale.edad = 21;
+        // console.log(ale);
+        // ale.face = "alesnchz8";
+        // console.log(ale);
+
+//56. ***** PROPIEDADES DINAMICAS DE LOS OBJETOS *****
+    </script>
+</body>
+</html>

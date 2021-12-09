@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundament Java Script</title>
+</head>
+
+<body>
+
+    <script>
+       /* var hola="hola mundo";//ambito global
+        let hello="hello work";//ambito de bloque
+        console.log(hola);
+        console.log(hello);
+        console.log("++++++++++++ var ++++++++++")
+        var musica="rock";
+        console.log("fuera del bloque",musica);
+        {
+            console.log("Dentro del bloque",musica);
+        }
+        var musica="pop";
+        console.log("Final fuera del bloque",musica);
+        console.log("++++++++++++let++++++++++++++");
+        let musica2="rock";
+        console.log("fuera del bloque",musica2);
+        {
+            let musica2="pop";
+            console.log("dentro del bloque",musica2);
+        }
+        console.log("final fuera del bloque",musica2);
+        console.log("++++++++++++++++++const++++");
+        const pi=3.1416;
+    //const pi=5; esto esta prohibido porque pi es constante y no cambia
+        console.log(pi);
+        const objeto={
+    //objeto conjunto de atributos con su respectivo valor
+            nombre:"alejandro",
+            edad:20
+        }
+        const colores=["azul","rojo","verde"];//arreglo conjunto de datos
+        console.log(objeto);
+        console.log(colores);
+        objeto.correo="alesnchz4@gmail.com";
+        colores.push("naranja")
+        console.log(objeto);
+        console.log(colores);
+
+//5.- ***** CADENAS DE TEXTO *****
+        let nombre="Alejandro";
+        let apellido='lopez';
+        let saludo=new String("hola mundo");
+        let lorem = "hola, que tal señoras y señores, mi nombre es alejandro sanchez lopez";
+    //propiedad length
+        console.log(nombre.length,apellido.length,saludo.length);
+    //obligar a todo en mayuscula
+        console.log(nombre.toLowerCase(),apellido.toUpperCase());
+    //ver si una palabra aparece
+        console.log(lorem.includes("alejandro"));
+    //quita espacios en blanco o caracteres
+        console.log(lorem.trim());
+    //convertir una cadena de texto en arreglo
+        console.log(lorem.split(" "));
+        console.log(lorem.split(","));
+    //concatenar una cadena de texto
+        let nombre1='alejandro ';
+        let apellido1='sanchez';
+        let saludo1='hola mi nombre es ';
+        console.log(saludo1 + nombre1 + apellido1);
+    //interpolacion de variables
+        let saludo2=`hola mi nombre es ${nombre1}${apellido1}`;
+        console.log(saludo2);
+    //html en una sola linea
+        let ul="<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>"
+        console.log(ul)
+    //html en diferentes lineas con comillla invertida
+        let ul2=`<ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li></ul>`
+        console.log(ul2)
+    //html en diferentes lineas con concatenacion
+        let ul3="<ul>";
+            ul3+="<li>Primavera</li>";
+            ul3+="<li>Verano</li>";
+            ul3+="<li>Otoño</li>";
+            ul3+="<li>Invierno</li>";
+            ul3+="</ul>";
+        console.log(ul3);
+//9.- ***** DATO NUMERIOCO *****
+        let a=2;
+        let b=new Number(1);
+        let c=7.19;
+        let d='5.3'
+        console.log(a,b);
+    //total de numeros despues del 0
+        console.log(c.toFixed(5));
+    //parsear un numero
+        console.log(parseInt(d));
+        console.log(parseFloat(d));
+    //tipo de dato
+        console.log(typeof(a),typeof(d));
+    //sumar un numero
+        console.log(a+b);
+    //concatenacion
+        console.log(a+d)
+        console.log(a+parseFloat(d));
+    //variables boleanos
+        let f=false;
+        let v=true;
+        console.log(f,v);
+    //NaN not a Number
+        let nonumero='hola'*3.2;
+        console.log(nonumero);
+
+
+//10.- ***** FUNCION *****
+    //una funcion es un bloque de codigo, autocontenido que se puede definir una vez y ejecutar en cualquier momento.
+    //opcionalmente, una funcion puede aceptar parametros y devolver un valor.
+    //las funciones en javascript son objetos: se dice que las funciones son ciudadanos de primera clase porque
+    //pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno.
+        function sumar(a,b){
+            return a+b;
+        }
+    //invocacion de funcion
+        fun=sumar(2,3);
+        console.log(fun);
+        function saludar(nombre,edad){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} anios`);
+        }
+        saludar("alejandro",20);
+        //FUNCION ANONIMA
+        const funcionexpresada = function(){
+            console.log("soy una funcion expresada, es decir una funcion que se le ah asignado como valor a una variable si invocamos esta funcion antes de su definicion JS nos dira...");
+            console.log("no se puede invocar a la funcion antes, tieene que ser despues")
+        }
+        funcionexpresada();
+
+//11.- ***** ARREGLOS *****
+        const arreglo=[[1,2,3],[4,5,6],[7,8,9]];
+        console.log(arreglo);
+        console.log(arreglo.length);
+        console.log(arreglo[0][2]);
+
+        const arreglo1=Array.of('x','y','z',2,4);
+        console.log(arreglo1);
+        const arreglo2 = Array(100).fill(0);
+        console.log(arreglo2);
+    //metodos de arreglo
+        const color=['rojo','verde','azul'];
+        console.log(color);
+        color.push('naranja');
+        console.log(color);
+        color.pop();
+        console.log(color);
+        color.forEach(function (el,index){
+            console.log(`<li id="${index}">${el}</li>`);
+        })
+
+//12.-**** OBJETO *****
+//un objeto es una coleccion de llaves valores
+    //dentro de un objeto a las variables se les va a llamar atributos/propiedades y a las 
+    //funciones se les llama metodos
+        const alex={
+            nombre:"alejando",
+            apellido:"sanchez",
+            edad:19,
+            pasatiempo:["correr","ver peliculas","animales"],
+            soltero:true,
+            contacto:{
+                twiter:"ale",
+                insta:"ale",
+            },
+            saludar:function(){
+                console.log("hola JAJA");
+            }, 
+            decirnombre:function(){
+                console.log(`hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} anios`)
+            }
+        }
+        console.log(alex);
+        console.log(alex["nombre"]);
+        console.log(alex.soltero);
+        console.log(alex.pasatiempo);
+        console.log(alex.pasatiempo[2]);
+        console.log(alex.contacto.insta);
+        alex.saludar();
+        alex.decirnombre();
+        console.log(Object.keys(alex));
+        console.log(Object.values(alex));
+        console.log(alex.hasOwnProperty("nombre"));
+        console.log(alex.hasOwnProperty("nacimiento"));
+
+//13.-**** OPERADORES ****
+    //operadores aritmeticos +,-,*,/,%,()
+        let num1 = 1+3*3+(3-2);
+        let modulo = 5 % 2;
+        console.log(num1);
+        console.log(modulo);
+    //operadores relacionales <, ==, ===, >, <=, >=, !=, !==
+        console.log(8>9);
+        console.log(9>9);
+        console.log(8>=9);
+        console.log(8<=8);
+    //= 1 igual es asignacion de variable
+        const ig = 2;
+    //== 2 igual es comparacion de variables
+        console.log(3 == 3);
+        console.log('3' == 3);
+        console.log(0 == false);
+    //=== 3 iguales es comparacion de tipo de dato y valor
+        console.log(3 === 3);
+        console.log('3' === 3);
+        console.log(0 === false);
+    //Operadores de incremento y decremento =+, =-
+        let i = 0;
+        i +=5;
+        console.log(i);
+        i -=1;
+        console.log(i);
+        //operador unario
+        i++;
+        console.log(i);
+        --i;
+        console.log(i);
+    //operdores logicos 
+        //(!) NOT niega es decir lo que es verdader lo vuelve falso y vicebersa
+        console.log(!true);
+        console.log(!false);
+        //(||) OR cuando tengo 2 o mas condiciones, con que uno se cumpla el or validara
+        console.log(9===9 || "9"===9);
+        console.log(9==="9" || "9"===9);
+        //(&&) AND cuando tengo 2 o mas validaciones todas tienen que cumplirse, para que and
+        //se valide
+        console.log(9===9 && "9"===9);
+        console.log(9===9 && 7===7);
+
+//14.-*** estructuras de control "CONDICIONALES" ***
+//es aquel mecanismo que permite controlar el flujo de tu programacion.
+        let edad = 20;
+        if (edad >= 18){
+            console.log('mayor de edad');
+        }else{
+            console.log('menor edad');
+        }
+        
+        let h = 0;
+        if ((h>=6)&&(h<=11)){
+            console.log('buenos dias');
+        }else if ((h>=12) && (h<=19)){
+            console.log('buenas tardes');
+        }else{
+            console.log('dejame dormir');
+        }
+    //operador ternario (condicion)?verdadero:falso
+    let eresMayor=(edad>=18)?'eres mayor de edad':'eres menor de edad';
+    console.log(eresMayor);
+    let dia=3;
+    switch (dia) {
+        case 0:
+            console.log('hoy es domingo');
+            break;
+            case 1:
+            console.log('hoy es lunes');
+            break;
+            case 2:
+            console.log('hoy es martes');
+            break;
+            case 3:
+            console.log('hoy es miercoles');
+            break;
+            case 4:
+            console.log('hoy es jueves');
+            break;
+            case 5:
+            console.log('hoy es viernes');
+            break;
+            case 6:
+            console.log('hoy es sabado');
+            break;    
+        default:
+            console.log('el dia no existe');
+            break;
+    }
+//15.- ***** CICLOS O ESTRUCTURAS REPETITIVAS*****
+        let numero = 0;
+        while (numero < 10){
+            console.log('while '+numero);
+            numero++;
+        }
+        do{
+            console.log('do while '+numero)
+            numero ++;
+        }while(numero < 10);
+    // for(inicializacion de variable; condicion; decremento o incremento)
+        for(let i=0;i<10;i++){
+            console.log('for '+i);
+        }
+        let numeros = [10,20,30,40,50,60,70,80,90];
+        for(let i=0; i<numeros.length;i++){
+            console.log(numeros[i]);
+        }
+        const alejandro={
+            nombre:'alejandro',
+            apellido:"sanchez",
+            edad:"20 anios"
+        }
+    //for in es mas para objetos
+        for(const key in alejandro){
+            console.log(`key:${key} value: ${alejandro[key]}`);
+        }
+    //for of es mas para arreglos y casdena de texto
+        for(const elemento of numeros){
+            console.log (elemento);
+        }
+        let cadena = 'hola mundo';
+        for(const caracter of cadena){
+            console.log(caracter);
+        }
+
+//16.- ***** MANEJO DE ERRORES *****
+        try {
+            var a;
+            console.log('en el try se agrega el codigo a evaluar');
+        } catch (error) {
+            console.log(error);
+            console.log('en el catch captura cualquier error surgido o lanzado en el try');
+        }finally{
+            console.log("el bloque finally se ejecutara siempre al final de un bloque try-catch");
+        }
+
+        try {
+            let N='k';
+            if(isNaN(N)){
+                throw new Error('el caracter ingresado no es numero');
+            }
+            console.log(N*N);
+        } catch (error) {
+            console.log(`se produjo el siguiente error ${error}`);
+        }
+//17.- ***** break and continue *****
+        let arregloNumero = [1,2,3,4,5,6,7,8,9,0];
+        for (let i = 0; i < arregloNumero.length; i++){
+            if(i === 5){
+                break;
+            }
+            console.log(arregloNumero[i]);
+        }
+        for (let i = 0; i < arregloNumero.length; i++){
+            if(i === 5){
+                continue;
+            }
+            console.log(arregloNumero[i]);
+        }
+//18.- ***** DESTRUCTURACION *****
+//se ocupa en ocasines en frameworks como react js
+        const numeros = [1,2,3];
+    //sin destructuracion
+        let uno = numeros[0];
+        let dos = numeros[1];
+        let tres = numeros[2];
+        console.log(uno,dos,tres);
+    //con destructuracion 
+        const [one,two, three] = numeros;
+        console.log(one, two, three); 
+        const objAle = {
+            nombre:'alejandro',
+            apellido:'sanchez',
+            edad:20
+        }
+        const {nombre,apellido,edad} = objAle;
+        console.log(nombre,apellido,edad);
+//19.- ***** OBJETOS LITERALES ***** 
+        function suma(n,m) {
+            console.log(n+m);
+        }
+        suma(1,2);
+
+        let nombre = 'ron',edad=12;
+        const perro = {
+            nombre,
+            edad,
+            accion(){
+                console.log('guauuu guauuu!!');
+            }
+        }
+        console.log(perro)
+
+//20.- ***** PARAMETRO REST *****
+        function suma(a,b,...c) {
+            let resultado = a+b;
+            c.forEach(function (n) {
+            resultado += n;
+        });
+        return resultado
+        }
+        console.log(suma(1,2));
+        console.log(suma(1,2,3,4,5));
+    //Operador Spread
+        const arr1 = [1,2,3,4,5], arr2 = [6,7,8,9,0];
+        const arr3 = [...arr1,...arr2];
+        console.log(arr3);
+//21.- ***** ARROW FUNCTION O FUNCIONES DE FLECHA FUNCIONES ANONIMAS *****
+        const funcion1 = ()=>{
+            console.log('hola mundo');
+        }
+        funcion1();
+
+        const sumar = (a,b,c) =>{
+            return a+b+c;
+        }
+        console.log(sumar(1,2,3));
+    //arrow function en objetos
+        const recorrer = [1,2,3,4,5,6];
+        recorrer.forEach((el,index) => console.log(`${el} esta en la posicion ${index}`));
+
+        const perro = {
+            nombre:'ron',
+            ladrar:()=>{
+                console.log(this)
+            }
+        }
+        perro.ladrar();
+//22.- ***** PROTOTIPOS POO *****
+        function Animal(nombre,genero) {
+            this.nombre = nombre;
+            this.genero = genero;
+            this.hace = function(){
+                console.log(`hago una accion porque estoy vivo`)
+            }
+            this.saludar = function(){
+                console.log(`hola me llamo ${this.nombre}`);
+            }
+        }
+        const snupy = new Animal('snupy','macho');
+        const lola = new Animal('lola bunny','hembra');
+        console.log(snupy);
+        console.log(lola);
+
+    //metodos agregar prototipo de la funcion constructora
+        function Animal(nombre,genero) {
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+    //metodos agregados al prototipo de la funcion constructora
+        Animal.prototype.hace = function(){
+            console.log(`hago una accion porque estoy vivo`)
+        }
+        Animal.prototype.saludar = function(){
+            console.log(`hola me llamo ${this.nombre}`);
+        }
+        const snupy1 = new Animal('snupy','macho');
+        const lola1 = new Animal('lola bunny','hembra');
+        console.log(snupy1);
+        console.log(lola1);
+//23.- ***** HERENCIA PROTOTIPICA *****
+        function Perro(nombre,genero,tamanio) {
+            this.super = Animal;
+            this.super(nombre,genero);
+            this.tamanio = tamanio;
+        }
+    //perro esta heredando de animal
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro;
+    //sobre escritura de metodos del prototipo padre en el hijo
+        Perro.prototype.hace = function (){
+            console.log(`soy un perro y ladro`);
+        }
+        Perro.prototype.ladrar = function (){
+            console.log(`guauuu guauuu !!`);
+        }
+        const snoopy = new Perro('snupy','macho','pequenio');
+        console.log(snoopy);
+        snoopy.hace();
+        snoopy.saludar();
+        snoopy.ladrar();*/
+    </script>
+</body>
+</html>
