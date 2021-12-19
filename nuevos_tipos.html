@@ -246,6 +246,151 @@
         // console.log(ale);
 
 //56. ***** PROPIEDADES DINAMICAS DE LOS OBJETOS *****
+//existe la necesiad de crear propiedades al vuelo de forma dinamica
+//lo qu eva aindicar que una propiedad la pueda definir de manera dinamica es la sintaxis de los corchetes[]
+        // let aleatorio = Math.round(Math.random()*100+3);
+        // const objUsuario ={
+        //     propiedad:"valor",
+        //     [`id_${aleatorio}`]:"valor aleatorio"
+        // }
+
+        // console.log(objUsuario);
+
+        // const usuario =["Alejandro","Hector","Angel"];
+        // usuario.forEach((usuario,index)=>objUsuario[`id_${index}`]=usuario);
+
+        // console.log(objUsuario);
+//57.- ***** THIS *****
+        // console.log(this);
+        // console.log(window);
+        // console.log(this === window);
+
+        // this.nombre = "contexto global";
+        // console.log(this.nombre);
+
+        // function imprimir() {
+        //     console.log(this.nombre);
+        // }
+        // imprimir();
+
+        // const obj1 = {
+        //     nombre:"contexto objeto1",
+        //     imprimir:function(){
+        //         console.log(this.nombre);
+        //     }
+        // }
+        // obj1.imprimir();
+
+        // const obj2 ={
+        //     nombre:"contexto objeto 2",
+        //     imprimir
+        // }
+        // obj2.imprimir();
+
+        // const obj3 = {
+        //     nombre:"contexto objeto3",
+        //     imprimir:()=>{
+        //         console.log(this.nombre);
+        //     }
+        // }
+        // obj3.imprimir();
+
+        // // function persona(nombre) {
+        // //     this.nombre=nombre;
+        // //     return console.log(this.nombre)
+        // // }
+        // // const alex = persona("alejandro");
+
+        // function persona(nombre) {
+        //     this.nombre=nombre;
+        //     return ()=> {
+        //         console.log(this.nombre);
+        //     }
+        // }
+
+        // let alex = new persona("alejandro");
+        // alex();
+
+//58.- ***** CALL, APPLY, & BIND *****
+        // console.log(this);
+        // this.lugar = "Contexto Global";
+        // console.log(this.lugar);
+
+        // function saludar (saludo,aQuien){
+        //     console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+        // }
+        // saludar("hola","Ron");
+
+        // const obj={
+        //     lugar:"Contexto Objeto"
+        // }
+
+        // saludar.call(obj,"Hola","Alejandro");
+        // saludar.apply(obj,["Adios","Alejandro"]);
+        
+        // saludar.call(null,"Hola","Alejandro");
+        // saludar.apply(null,["Adios","Alejandro"]);
+
+        // saludar.call(this,"Hola","Alejandro");
+        // saludar.apply(this,["Adios","Alejandro"]);
+
+        // this.nombre = "window";
+
+        // const persona={
+        //     nombre:"alejandro",
+        //     saludar:function(){
+        //         console.log(`Hola ${this.nombre}`)
+        //     }
+        // }
+
+        // persona.saludar();
+        // const OtraPersona={
+        //     saludar:persona.saludar.apply(this)
+        // }
+
+        // otraPersona.saludar();
+
+//59.- ***** JSON *****
+//JavaScript Object Notation(Notacion de Objeto JavaScript)
+// //es un formato ligero de intercambio de datos. Leerlo y escribirlo es simple 
+// //para humanos, mientras que para las máquinas es fácil de interpretar y generar.
+// //Todos los lenguajes de programación lo soportan.
+//         const json={
+//             cadena:"Alejandro",
+//             numero:21,
+//             booleano:true,
+//             arreglo:['dormir','viaje','ver peli'],
+//             objeto:{
+//                 instagram:"alesnchz8",
+//                 email:"alesnchz4@gmail.com"
+//             },
+//             nulo:null
+//         }
+//         console.log(json);
+
+//     //parse lo que hace es analizar una cadena de texto y convertirlo a un objeto valido
+//     //para JavaScript.
+//         console.log(JSON);
+//         console.log(JSON.parse("[1,2,3]"));
+//         console.log(JSON.parse("{}"));
+//         console.log(JSON.parse("true"));
+//         console.log(JSON.parse("false"));
+//         console.log(JSON.parse("19"));
+//         console.log(JSON.parse("null"));
+//     //stringify lo que hace es todo lo contrario al parse, ya que este convierte
+//     //un objeto valido en solo una cadena de texto
+        
+//         console.log(JSON.stringify([1,2,3]));
+//         console.log(JSON.stringify({}));
+//         console.log(JSON.stringify(true));
+//         console.log(JSON.stringify(false));
+//         console.log(JSON.stringify(19));
+//         console.log(JSON.stringify(null));
+
+//         console.log(JSON.stringify(json));
+//         console.log(JSON.parse('{"cadena":"Alejandro","numero":21,"booleano":true,"arreglo":["dormir","viaje","ver peli"],"objeto":{"instagram":"alesnchz8","email":"alesnchz4@gmail.com"},"nulo":null}'));
+        
+
     </script>
 </body>
 </html>

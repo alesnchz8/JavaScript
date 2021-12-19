@@ -1,0 +1,11 @@
+{
+    "cadena":"Alejandro",
+    "numero":"21",
+    "booleano":"true",
+    "arreglo":["dormir","ver pelis","correr"],
+    "objeto":{
+        "instagram":"alesnchz8",
+        "email":"alesnchz4@gmail.com"
+    },
+    "nulo":null
+}
