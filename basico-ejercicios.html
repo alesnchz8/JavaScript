@@ -272,21 +272,21 @@ pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.*/
 
 /*19) Programa una función que valide que un texto sea un nombre válido, pe.
 miFuncion("Jonathan MirCha")devolverá verdadero.*/
-        // const validarNombre = (nombre="")=>{
-        //         if(!nombre) return console.info("El usuario no ha ingresado ningun nombre");
-        //         if(typeof nombre !== "string") return console.error("el dato ingresado no es un texto");
+         const validarNombre = (nombre="")=>{
+                if(!nombre) return console.info("El usuario no ha ingresado ningun nombre");
+                if(typeof nombre !== "string") return console.error("el dato ingresado no es un texto");
 
-        //         let expresion = /^[A-Za-zÑñÁÉÍÓÚáéíóú\s]+$/g.test(nombre);
+                let expresion = /^[A-Za-zÑñÁÉÍÓÚáéíóú\s]+$/g.test(nombre);
 
-        //         if(expresion){
-        //                 return console.log(`${nombre} es un nombre valido`);
-        //         }else {
-        //                 return console.log(`${nombre} no es un nombre valido`);
-        //         }
-        // }
-        // validarNombre();
-        // validarNombre(2);
-        // validarNombre("Alejandro Sanchez");
+                if(expresion){
+                        return console.log(`${nombre} es un nombre valido`);
+                }else {
+                        return console.log(`${nombre} no es un nombre valido`);
+                }
+        }
+        validarNombre();
+        validarNombre(2);
+        validarNombre("Alejandro Sanchez");
 
 
 /*20) Programa una función que valide que un texto sea un email válido, pe. 
